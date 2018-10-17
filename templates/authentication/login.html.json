@@ -1,0 +1,10 @@
+{
+  "@import": {
+    "app": "data/app.json",
+    "campaign": "data/campaign.json"
+  },
+  "asset": "func",
+  "path": "func",
+  "csrf_token": "func",
+  "last_username": "Faassen"
+}

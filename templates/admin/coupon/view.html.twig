@@ -1,0 +1,60 @@
+{% extends '../../base.html.twig' %}
+
+{% block title %}Coupon{% endblock %}
+{% block breadcrumbs %}
+    {{ parent() }}
+    <li>
+        <a href="{{ path('admin_dashboard') }}">
+            Admin
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_campaign_index') }}">
+            Campaigns
+        </a>
+    </li>
+    <li><a href="{{ path('admin_campaign_view', {'id': coupon.campaign.id}) }}">#{{coupon.campaign.id}}</a></li>
+    <li><a href="{{ path('admin_coupon_index', {'campaignId': coupon.campaign.id}) }}">Coupons</a></li>
+    <li>{{coupon.id}}
+{% endblock breadcrumbs %}
+
+{% block body %}
+    <h3>Coupon</h3>
+
+    <hr>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Xuid</th>
+                <td>{{ coupon.xuid }}</td>
+            </tr>
+            <tr>
+                <th>Created At</th>
+                <td>{{ coupon.createdAt|date('Y-m-d H:i') }}</td>
+            </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ coupon.user }}</td>
+            </tr>
+            <tr>
+                <th>Used At</th>
+                <td>{% if  coupon.usedAt %} {{ coupon.usedAt|date('Y-m-d H:i') }} {% endif %} </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="buttonbox" >
+        <a href="{{ path('admin_coupon_index', {'campaignId': coupon.getCampaign.id }) }}" class="btn btn-primary" >
+            <li class="fa fa-arrow-left"></li> Back
+        </a>
+        <a href="{{ path('admin_coupon_edit', {'id': coupon.id, 'campaignId': coupon.getCampaign.id }) }}" class="btn btn-success" >
+            <li class="fa fa-edit"></li> Edit
+        </a>
+
+        <a href="{{ path('admin_coupon_delete', {'id': coupon.id, 'campaignId': coupon.getCampaign.id }) }}" class="btn btn-danger" onsubmit="return confirm('Are you sure you want to delete this item?');" >
+            <li class="fa fa-edit"></li> Delete
+        </a>
+    </div>
+
+{% endblock %}

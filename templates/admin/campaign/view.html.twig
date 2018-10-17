@@ -1,0 +1,96 @@
+{% extends '../../base.html.twig' %}
+
+{% block title %}Campaign{% endblock %}
+
+{% block breadcrumbs %}
+    {{ parent() }}
+    <li>
+        <a href="{{ path('admin_dashboard') }}">
+            Admin
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_campaign_index') }}">
+            Campaigns
+        </a>
+    </li>
+    <li>
+        #{{ campaign.id }}
+    </li>
+{% endblock breadcrumbs %}
+
+{% block body %}
+    <h3>Campaign</h3>
+
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Xuid</th>
+                <td>{{ campaign.xuid }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ campaign.name }}</td>
+            </tr>
+            <tr>
+                <th>Start At</th>
+                <td>
+                    {% if campaign.startAt %} {{ campaign.startAt|date('Y:m:d H:i') }} {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>End At</th>
+                <td>
+                    {% if campaign.endAt %} {{ campaign.endAt|date('Y:m:d H:i') }} {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Partner</th>
+                <td> {% if partner %} {{ partner.displayName }}  {% endif %} </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td> <div class="well" > {{ campaign.description|nl2br }} </div> </td>
+            </tr>
+            <tr>
+                <th>Details</th>
+                <td> <div class="well" >{{ campaign.details|markdown }}</div> </td>
+            </tr>
+            <tr>
+                <th>Benefits</th>
+                <td> <div class="well" > {{ campaign.benefits|nl2br }}</div></td>
+            </tr>
+            <tr>
+                <th>Image Url</th>
+                <td>{{ campaign.imageUrl }}</td>
+            </tr>
+            <tr>
+                <th>Secondary Image Urls</th>
+                <td> <div class="well" > {{ campaign.imageUrls|nl2br }}</div></td>
+            </tr>
+            <tr>
+                <th>Shared Code</th>
+                <td> {{ campaign.sharedCode }} </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="buttonbox" >
+        <a href="{{ path('admin_campaign_index') }}" class="btn btn-primary" >
+            <li class="fa fa-arrow-left"></li> Back
+        </a>
+        <a href="{{ path('admin_campaign_edit', {'id': campaign.id}) }}" class="btn btn-success" >
+            <li class="fa fa-edit"></li> edit
+        </a>
+
+        <a href="{{ path('admin_coupon_index', {'campaignId': campaign.id}) }}" class="btn btn-success" >
+            <li class="fa fa-list"></li> Coupons
+        </a>
+
+        <a href="{{ path('admin_campaign_category_assign', {'id': campaign.id}) }}" class="btn btn-success" >
+                <li class="fa fa-plus"></li> Assign Categories
+            </a>
+    </div>
+
+{% endblock %}

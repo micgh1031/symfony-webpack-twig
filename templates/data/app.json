@@ -1,0 +1,27 @@
+{
+	"user": {
+		"username": "Joost Faassen"
+	},
+	"session": {
+		"flashbag": {
+			"error": [
+				{
+					"flashMessageType": "error",
+					"flashMessage": "message_error_content"
+				},
+				{
+					"flashMessageType": "message_type",
+					"flashMessage": "message_content"
+				},
+				{
+					"flashMessageType": "error",
+					"flashMessage": "message_error_content"
+				},
+				{
+					"flashMessageType": "message_type",
+					"flashMessage": "message_content"
+				}
+			]
+		}
+	}
+}

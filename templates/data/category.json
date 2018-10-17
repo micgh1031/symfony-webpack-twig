@@ -1,0 +1,44 @@
+{
+  "id": "id123",
+  "name": "category_name123",
+  "uri": "categories/category1/234",
+  "description": "this is a category",
+  "campaignCategories": [
+    {
+      "campaign": {
+        "id" : "campaign_123456",
+        "name" : "REAL CAMPAIGN",
+        "imageUrl" : "https://picsum.photos/200/300/?random",
+        "startAt" : "2018-05-02T08:55:41Z",
+        "endAt" : "2018-05-02T08:55:41Z"
+      }
+    },
+    {
+      "campaign": {
+        "id" : "campaign_123456",
+        "name" : "REAL CAMPAIGN",
+        "imageUrl" : "https://picsum.photos/200/300/?random",
+        "startAt" : "2018-05-02T08:55:41Z",
+        "endAt" : "2018-05-02T08:55:41Z"
+      }
+    },
+    {
+      "campaign": {
+        "id" : "campaign_123456",
+        "name" : "REAL CAMPAIGN",
+        "imageUrl" : "https://picsum.photos/200/300/?random",
+        "startAt" : "2018-05-02T08:55:41Z",
+        "endAt" : "2018-05-02T08:55:41Z"
+      }
+    },
+    {
+      "campaign": {
+        "id" : "campaign_123456",
+        "name" : "REAL CAMPAIGN",
+        "imageUrl" : "https://picsum.photos/200/300/?random",
+        "startAt" : "2018-05-02T08:55:41Z",
+        "endAt" : "2018-05-02T08:55:41Z"
+      }
+    }
+  ]
+}

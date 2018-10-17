@@ -1,0 +1,62 @@
+[
+	{
+		"xuid" : "campaign_xuid123",
+		"id" : "campaign_123456",
+		"name" : "REAL CAMPAIGN",
+		"imageUrl" : "https://picsum.photos/200/300/?random",
+		"startAt" : "2018-05-02T08:55:41Z",
+		"endAt" : "2018-05-02T08:55:41Z",
+		"description": "this is super campaign",
+		"details" : "campaign details",
+		"benefits" : "campaign benefits",
+		"sharedCode" : "code987654"
+	},
+	{
+		"xuid" : "campaign_xuid123",
+		"id" : "campaign_123456",
+		"name" : "REAL CAMPAIGN",
+		"imageUrl" : "https://picsum.photos/200/300/?random",
+		"startAt" : "2018-05-02T08:55:41Z",
+		"endAt" : "2018-05-02T08:55:41Z",
+		"description": "this is super campaign",
+		"details" : "campaign details",
+		"benefits" : "campaign benefits",
+		"sharedCode" : "code987654"
+	},
+	{
+		"xuid" : "campaign_xuid123",
+		"id" : "campaign_123456",
+		"name" : "REAL CAMPAIGN",
+		"imageUrl" : "https://picsum.photos/200/300/?random",
+		"startAt" : "2018-05-02T08:55:41Z",
+		"endAt" : "2018-05-02T08:55:41Z",
+		"description": "this is super campaign",
+		"details" : "campaign details",
+		"benefits" : "campaign benefits",
+		"sharedCode" : "code987654"
+	},
+	{
+		"xuid" : "campaign_xuid123",
+		"id" : "campaign_123456",
+		"name" : "REAL CAMPAIGN",
+		"imageUrl" : "https://picsum.photos/200/300/?random",
+		"startAt" : "2018-05-02T08:55:41Z",
+		"endAt" : "2018-05-02T08:55:41Z",
+		"description": "this is super campaign",
+		"details" : "campaign details",
+		"benefits" : "campaign benefits",
+		"sharedCode" : "code987654"
+	},
+	{
+		"xuid" : "campaign_xuid123",
+		"id" : "campaign_123456",
+		"name" : "REAL CAMPAIGN",
+		"imageUrl" : "https://picsum.photos/200/300/?random",
+		"startAt" : "2018-05-02T08:55:41Z",
+		"endAt" : "2018-05-02T08:55:41Z",
+		"description": "this is super campaign",
+		"details" : "campaign details",
+		"benefits" : "campaign benefits",
+		"sharedCode" : "code987654"
+	}
+]

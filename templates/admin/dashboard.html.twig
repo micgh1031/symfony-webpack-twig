@@ -1,0 +1,16 @@
+{% extends '../base.html.twig' %}
+
+{% block breadcrumbs %}
+	{{ parent() }}
+    <li>
+    	<a href="{{ path('admin_dashboard') }}">
+    		Admin
+    	</a>
+    </li>
+{% endblock breadcrumbs %}
+
+{% block body %}
+
+    <h1>Welcome Admin!</h1>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends '../base.html.twig' %}
+
+{% block page %}login{% endblock %}
+
+{% block wrapper %}        
+    <form action="{{ path('login') }}" method="post" class="form-signin text-center">
+        <h1 class="h3 mb-3 font-weight-normal">
+            <a href="{{ path('frontpage') }}">
+                Coupon
+            </a>
+        </h1>
+
+        <h1 class="h3 mb-3 font-weight-normal">Secure Sign in</h1>
+        
+        <input type="text" id="username" name="_username" value="{{ last_username }}" autofocus="true" required="required" class="form-control" placeholder="Username" />
+        <input type="password" id="password" name="_password" class="form-control" required="required" placeholder="Password" />
+        
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>        
+{% endblock %}    

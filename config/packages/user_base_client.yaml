@@ -1,0 +1,3 @@
+user_base_client:
+    http_client:
+      url: '%env(USERBASE_DSN)%'

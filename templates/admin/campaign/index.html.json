@@ -1,0 +1,8 @@
+{
+  "@import": {
+    "app": "data/app.json",
+    "campaigns": "data/campaigns.json"
+  },
+  "asset": "func",
+  "path": "func"
+}

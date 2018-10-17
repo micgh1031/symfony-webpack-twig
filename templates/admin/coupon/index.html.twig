@@ -1,0 +1,100 @@
+{% extends '../../base.html.twig' %}
+
+{% block title %}{{ campaign.name }} Coupons {% endblock %}
+
+{% block breadcrumbs %}
+    {{ parent() }}
+    <li>
+        <a href="{{ path('admin_dashboard') }}">
+            Admin
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_campaign_index') }}">
+            Campaigns
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_campaign_view', {'id': campaign.id}) }}"> #{{campaign.id}} </a>
+    </li>
+    <li>
+        Coupons
+    </li>
+{% endblock breadcrumbs %}
+
+{% block body %}
+    <div class=" pull-right">
+        <a href="{{ path('admin_coupon_add',{'campaignId': campaign.id }) }}" class="btn btn-success">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            Add
+        </a>
+        <a href="{{ path('admin_coupon_generate',{'campaignId': campaign.id }) }}" class="btn btn-success">
+            <i class="fa fa-plug" aria-hidden="true"></i>
+            Generate
+        </a>
+        <a href="{{ path('admin_coupon_upload',{'campaignId': campaign.id }) }}" class="btn btn-success" title="Upload CSV" >
+            <i class="fa fa-upload" aria-hidden="true"></i>
+            Upload
+        </a>
+        <a href="{{ path('admin_coupon_download',{'campaignId': campaign.id }) }}" class="btn btn-success" title="Download CSV" >
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+        </a>
+    </div>
+    <h3> {{ campaign.name }} : Coupons</h3>
+    <hr>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Xuid</th>
+                <th>Created At</th>
+                <th>User</th>
+                <th>Used At</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coupon in coupons %}
+            <tr>
+                <td>
+                    <a href="{{ path('admin_coupon_view', {'id': coupon.id, 'campaignId': campaign.id}) }}">
+                        {{ coupon.xuid }}
+                    </a>
+                </td>
+                <td>{{ coupon.createdAt|date('Y-m-d H:i') }}</td>
+                <td>{{ coupon.user }}</td>
+                <td>{% if  coupon.usedAt %} {{ coupon.usedAt|date('Y-m-d H:i') }} {% endif %}</td>
+                <td> {{ coupon.code }} </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="buttonbox" >
+        <a href="{{ path('admin_campaign_view', {'id': campaign.id }) }}" class="btn btn-primary" >
+            <li class="fa fa-arrow-left"></li> Back
+        </a>
+
+        <a href="{{ path('admin_coupon_add',{'campaignId': campaign.id }) }}" class="btn btn-success">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            Add
+        </a>
+        <a href="{{ path('admin_coupon_generate',{'campaignId': campaign.id }) }}" class="btn btn-success">
+            <i class="fa fa-plug" aria-hidden="true"></i>
+            Generate
+        </a>
+        <a href="{{ path('admin_coupon_upload',{'campaignId': campaign.id }) }}" class="btn btn-success" title="Upload CSV" >
+            <i class="fa fa-upload" aria-hidden="true"></i>
+            Upload
+        </a>
+        <a href="{{ path('admin_coupon_download',{'campaignId': campaign.id }) }}" class="btn btn-success" title="Downpload CSV" >
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+        </a>
+    </div>
+{% endblock %}

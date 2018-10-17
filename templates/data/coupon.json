@@ -1,0 +1,31 @@
+{
+  "id": "coupon_id123",
+  "xuid" : "coupon_xuid123",
+  "createAt" : "2018-05-02T08:55:41Z",
+  "usedAt" : "2018-05-02T08:55:41Z",
+  "user" : "Coupon User",
+  "campaign": {
+    "id" : "campaign_123456",
+    "name" : "REAL CAMPAIGN",
+    "imageUrl" : "https://picsum.photos/200/300/?random",
+    "imageUrls" : "https://picsum.photos/200/300/?random",
+    "startAt" : "2018-05-02T08:55:41Z",
+    "endAt" : "2018-05-02T08:55:41Z",
+    "description": "this is super campaign",
+    "details" : "This is **Strong** and this is __italic__",
+    "benefits" : "campaign benefits",
+    "sharedCode" : "code987654"
+  },
+  "getCampaign": {
+    "id" : "campaign_123456",
+    "name" : "REAL CAMPAIGN",
+    "imageUrl" : "https://picsum.photos/200/300/?random",
+    "imageUrls" : "https://picsum.photos/200/300/?random",
+    "startAt" : "2018-05-02T08:55:41Z",
+    "endAt" : "2018-05-02T08:55:41Z",
+    "description": "this is super campaign",
+    "details" : "This is **Strong** and this is __italic__",
+    "benefits" : "campaign benefits",
+    "sharedCode" : "code987654"
+  }
+}

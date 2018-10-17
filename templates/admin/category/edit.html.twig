@@ -1,0 +1,42 @@
+{% extends '../../base.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block title %} {% if category.id %} Edit {% else %} Add {% endif %}  Category{% endblock %}
+
+{% block breadcrumbs %}
+    {{ parent() }}
+    <li>
+        <a href="{{ path('admin_dashboard') }}">
+            Admin
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_category_index') }}">
+            Categories
+        </a>
+    </li>
+    <li>
+    {% if category.id %}<a href="{{ path('admin_category_view', {'id': category.id}) }}"> #{{category.id}} </a>/ Edit {% else %} Add {% endif %}
+    </li>
+{% endblock breadcrumbs %}
+
+{% block body %}
+    <h3>{% if category.id %} Edit {% else %} Add {% endif %} Categorys</h3>
+
+    <hr>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <div class="buttonbox" >
+                <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+                <a href="{{ path('admin_category_index') }}" class="btn btn-primary" ><li class="fa fa-arrow-left"></li> Back</a>
+            </div>
+    {{ form_end(form) }}
+{% endblock %}
+
+
+{% block scripts_custom %}
+    <script src="{{ asset('js/to-markdown.js') }}"></script>
+    <script src="{{ asset('js/markdown.js') }}"></script>
+{% endblock %}

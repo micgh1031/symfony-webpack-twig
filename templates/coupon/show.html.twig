@@ -1,0 +1,39 @@
+{% extends '../base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1> <i class="fa fa-ticket"></i>Coupon </h1>
+    <img class="img-responsive" src="{{ coupon.campaign.imageUrl}}" />
+    <p class="lead">{{ coupon.campaign.description}}</p>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th width="12%" >Xuid</th>
+                <td>{{ coupon.xuid }}</td>
+            </tr>
+            <tr>
+                <th>Campaign</th>
+                <td>{{ coupon.campaign.name }}</td>
+            </tr>
+            <tr>
+                <th>Created At</th>
+                <td>{{ coupon.createdAt|date('Y-m-d H:i') }}</td>
+            </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ coupon.user }}</td>
+            </tr>
+            <tr>
+                <th>Used At</th>
+                <td>{{ coupon.usedAt }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <img src="{{path('coupon_qrcode',{'couponXuid': coupon.xuid })}}" />
+
+</div>
+{% endblock %}

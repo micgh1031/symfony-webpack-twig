@@ -1,0 +1,13 @@
+{
+  "@import": {
+    "app": "data/app.json",
+    "campaign": "data/campaign.json",
+    "partner": "data/partner.json"
+  },
+  "asset": "func",
+  "path": "func",
+  "button_label": "this is button",
+  "form_start": "form start",
+  "form_widget": "form start",
+  "form_end": "form start"
+}

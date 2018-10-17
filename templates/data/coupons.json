@@ -1,0 +1,42 @@
+[
+  {
+    "id": "coupon_id123",
+    "xuid" : "coupon_xuid123",
+    "createAt" : "2018-05-02T08:55:41Z",
+    "usedAt" : "2018-05-02T08:55:41Z",
+    "user" : "Coupon User",
+    "code" : "Coupon code123"
+  },
+  {
+    "id": "coupon_id123",
+    "xuid" : "coupon_xuid123",
+    "createAt" : "2018-05-02T08:55:41Z",
+    "usedAt" : "2018-05-02T08:55:41Z",
+    "user" : "Coupon User",
+    "code" : "Coupon code123"
+  },
+  {
+    "id": "coupon_id123",
+    "xuid" : "coupon_xuid123",
+    "createAt" : "2018-05-02T08:55:41Z",
+    "usedAt" : "2018-05-02T08:55:41Z",
+    "user" : "Coupon User",
+    "code" : "Coupon code123"
+  },
+  {
+    "id": "coupon_id123",
+    "xuid" : "coupon_xuid123",
+    "createAt" : "2018-05-02T08:55:41Z",
+    "usedAt" : "2018-05-02T08:55:41Z",
+    "user" : "Coupon User",
+    "code" : "Coupon code123"
+  },
+  {
+    "id": "coupon_id123",
+    "xuid" : "coupon_xuid123",
+    "createAt" : "2018-05-02T08:55:41Z",
+    "usedAt" : "2018-05-02T08:55:41Z",
+    "user" : "Coupon User",
+    "code" : "Coupon code123"
+  }
+]
