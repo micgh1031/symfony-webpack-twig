@@ -1,0 +1,2 @@
+# symfony-webpack-twig
+
