@@ -33,7 +33,7 @@
         "showdown": "^1.8.6",
         "style-loader": "^0.22.1",
         "twig": "^1.12.0",
-        "twig-loader": "^0.4.1",
+        "twig-loader": "git+https://github.com/cool-webpro17/twig-loader.git",
         "uglifyjs-webpack-plugin": "^1.3.0",
         "webpack-cli": "^3.1.0",
         "webpack-node-externals": "^1.7.2"
